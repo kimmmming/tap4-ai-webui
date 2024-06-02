@@ -64,14 +64,73 @@
     --input: 217.2 32.6% 17.5%;
     --ring: 212.7 26.8% 83.9%;
   }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  .header {
+    background-color: hsl(var(--card));
+    color: hsl(var(--card-foreground));
+    border-bottom: 1px solid hsl(var(--border));
+  }
+
+  .button {
+    background-color: hsl(var(--primary));
+    color: hsl(var(--primary-foreground));
+    border: none;
+    padding: 10px 20px;
+    border-radius: var(--radius);
+    cursor: pointer;
+  }
+
+  .button:hover {
+    background-color: hsl(var(--primary) / 0.8);
+  }
+
+  .search-box {
+    background-color: hsl(var(--card));
+    border: 1px solid hsl(var(--border));
+    padding: 10px;
+    border-radius: var(--radius);
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .search-box input {
+    border: none;
+    outline: none;
+    width: calc(100% - 40px);
+    padding: 10px;
+    border-radius: var(--radius);
+  }
+
+  .search-box button {
+    background-color: hsl(var(--primary));
+    color: hsl(var(--primary-foreground));
+    border: none;
+    padding: 10px;
+    border-radius: var(--radius);
+    cursor: pointer;
+    margin-left: -40px;
+  }
+
+  .search-box button:hover {
+    background-color: hsl(var(--primary) / 0.8);
+  }
+
+  .footer {
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+    border-top: 1px solid hsl(var(--border));
+    padding: 20px 0;
+    text-align: center;
+  }
 }
 
 @layer base {
   * {
     @apply border-border;
-  }
-  body {
-    @apply bg-background text-foreground;
   }
 }
 
